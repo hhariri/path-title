@@ -1,0 +1,37 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version "1.1.4"
+    id "org.jetbrains.intellij" version "0.2.16"
+}
+
+
+
+
+intellij {
+    version '15.0.1'
+    updateSinceUntilBuild false
+    pluginName 'PathTitle'
+  /*  publish {
+        username publishUsernameintel
+        password publishPassword
+        pluginId ''
+        channel  publishChannel
+    }*/
+}
+
+group 'com.hadihariri'
+
+if (hasProperty("teamcity")) {
+    version = teamcity["build.number"]
+} else
+    version = "0.1"
+
+repositories {
+    mavenCentral()
+}
+
+compileKotlin.destinationDir = compileJava.destinationDir
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.1.4"
+}

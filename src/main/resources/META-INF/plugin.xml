@@ -1,0 +1,26 @@
+<idea-plugin>
+  <id>com.hadihariri.pathtitle</id>
+  <name>Path Title</name>
+  <version>0.1</version>
+  <vendor email="mail@hadihariri.com" url="http://hadihariri.com">Hadi Hariri</vendor>
+
+  <description><![CDATA[
+      Set the window title to include full path
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <strong>0.1:</strong> First version<br>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="131"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>com.hadihariri.pathtitle.TitleComponent</implementation-class>
+    </component>
+  </application-components>
+
+</idea-plugin>
