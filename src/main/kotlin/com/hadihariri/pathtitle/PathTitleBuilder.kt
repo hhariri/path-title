@@ -11,7 +11,7 @@ class PathTitleBuilder : FrameTitleBuilder() {
     }
 
     override fun getFileTitle(project: Project, virtualFile: VirtualFile): String {
-        return "[${project.name}] ${virtualFile.canonicalPath!!.replace(project.basePath!!, "")}"
+        return "[${project.name}] ${virtualFile.canonicalPath?.replace(project.basePath ?: "", "")}"
     }
 
 }
